@@ -26,7 +26,7 @@ function deepClone<T>(source: T): T {
       // !!!!! Here's the difference between webpack and turbopack !!!!!
       // !!!!! In webpack the value of _owner is null !!!!!
       // !!!!! In turbopack the value of _owner is not null !!!!
-      console.log("key " + key + " is null " + source[key] === null);
+      console.log("key " + key + " is null " + (source[key] === null));
       console.log(source[key]);
     }
     output[key] = deepClone(source[key]);
